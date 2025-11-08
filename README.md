@@ -2,6 +2,8 @@
 
 A Chrome extension that extracts and captures phone numbers from web pages with one click.
 
+![Extension Screenshot](screenshot.png)
+
 ## Features
 
 - 🔍 **Smart Detection**: Automatically finds phone numbers in various formats (US, international, with/without country codes)
