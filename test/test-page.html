@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page - Phone Dialer Extension</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .contact-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    
+    .company-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .info-label {
+      font-weight: 500;
+      color: #6b7280;
+      min-width: 80px;
+    }
+    
+    .info-value {
+      color: #374151;
+    }
+    
+    a[href^="tel:"] {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    
+    a[href^="tel:"]:hover {
+      background: #eff6ff;
+      text-decoration: underline;
+    }
+    
+    .format-examples {
+      background: #fef3c7;
+      border: 1px solid #fbbf24;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+    }
+    
+    .format-title {
+      font-weight: 600;
+      color: #92400e;
+      margin-bottom: 8px;
+    }
+    
+    .format-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 14px;
+      color: #78350f;
+    }
+    
+    .instructions {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .instructions-title {
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 12px;
+    }
+    
+    .instructions ol {
+      margin-left: 20px;
+      color: #1e3a8a;
+    }
+    
+    .instructions li {
+      margin-bottom: 8px;
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: #10b981;
+      color: white;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📞 Phone Dialer Extension - Test Page</h1>
+    <p class="subtitle">Click su un numero di telefono per testare l'estensione</p>
+    
+    <div class="instructions">
+      <div class="instructions-title">Come testare:</div>
+      <ol>
+        <li>Assicurati che l'estensione sia installata e attiva</li>
+        <li>Verifica che il WebSocket server sia avviato (ws://localhost:3000)</li>
+        <li>Clicca su uno dei numeri di telefono qui sotto</li>
+        <li>Dovresti vedere una notifica di Chrome</li>
+        <li>Controlla la console del server per vedere il numero ricevuto</li>
+      </ol>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Contatti Italiani</div>
+      
+      <div class="contact-card">
+        <div class="company-name">Staff International SpA <span class="badge">Vicenza</span></div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Telefono:</span>
+            <a href="tel:+390444784500" class="info-value">+39 0444 784500</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Mobile:</span>
+            <a href="tel:+393331234567" class="info-value">+39 333 123 4567</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Email:</span>
+            <span class="info-value">info@staff.com</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="company-name">Fistenar Srl <span class="badge">Verona</span></div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Telefono:</span>
+            <a href="tel:024140539" class="info-value">02 414 0539</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Mobile:</span>
+            <a href="tel:+393479876543" class="info-value">+39 347 987 6543</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="company-name">Euroconciaria SpA <span class="badge">Arzignano</span></div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Telefono:</span>
+            <a href="tel:+390444686283" class="info-value">+39 0444 686283</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Centralino:</span>
+            <a href="tel:0444686200" class="info-value">0444 686200</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Formati Diversi (Test)</div>
+      
+      <div class="contact-card">
+        <div class="company-name">Esempi di Formattazione</div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Con +39:</span>
+            <a href="tel:+390445123456" class="info-value">+39 045 123456</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Senza +39:</span>
+            <a href="tel:0445123456" class="info-value">045 123456</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Mobile:</span>
+            <a href="tel:3331234567" class="info-value">333 123 4567</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Con trattini:</span>
+            <a href="tel:+39-045-123-456" class="info-value">+39-045-123-456</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Con spazi:</span>
+            <a href="tel:+39 045 123 456" class="info-value">+39 045 123 456</a>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Con parentesi:</span>
+            <a href="tel:+39(045)123456" class="info-value">+39 (045) 123456</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="format-examples">
+      <div class="format-title">📋 Formati Supportati:</div>
+      <div class="format-list">
+        <div>✅ +39 045 123456 (internazionale con spazi)</div>
+        <div>✅ +390445123456 (internazionale compatto)</div>
+        <div>✅ 045 123456 (locale con spazi)</div>
+        <div>✅ 333 1234567 (mobile)</div>
+        <div>✅ +39-045-123-456 (con trattini)</div>
+        <div>✅ +39 (045) 123456 (con parentesi)</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Contatti Internazionali</div>
+      
+      <div class="contact-card">
+        <div class="company-name">UK Company Ltd <span class="badge">London</span></div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Phone:</span>
+            <a href="tel:+442071234567" class="info-value">+44 20 7123 4567</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="company-name">USA Corp <span class="badge">New York</span></div>
+        <div class="contact-info">
+          <div class="info-row">
+            <span class="info-label">Phone:</span>
+            <a href="tel:+12125551234" class="info-value">+1 (212) 555-1234</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 14px;">
+      <p>📱 Phone Dialer Extension v1.0.0</p>
+      <p style="margin-top: 8px;">Clicca su un numero per testare l'estensione</p>
+    </div>
+  </div>
+</body>
+</html>
+

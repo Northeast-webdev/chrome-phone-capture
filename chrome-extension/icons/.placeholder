@@ -1,0 +1,42 @@
+# Icon Placeholder
+
+This folder needs three PNG icon files:
+- icon16.png (16x16 pixels)
+- icon48.png (48x48 pixels)
+- icon128.png (128x128 pixels)
+
+## Quick Solution Options:
+
+### Option 1: Use Online Icon Generator
+1. Visit: https://www.favicon-generator.org/
+2. Upload a phone icon image
+3. Generate all sizes
+4. Download and place here
+
+### Option 2: Use Placeholder Icons
+For quick testing, you can use any 48x48 PNG image and name it:
+- icon16.png
+- icon48.png
+- icon128.png
+
+### Option 3: Design in Figma/Photoshop
+Create professional icons with:
+- Phone/dialer symbol
+- Blue/green colors
+- Transparent background
+
+## Icon Requirements:
+- Format: PNG
+- Background: Transparent recommended
+- Style: Simple, recognizable at small sizes
+- Colors: Brand colors (blue #3b82f6 suggested)
+
+## Example Icon Ideas:
+- 📞 Phone handset
+- 📱 Mobile phone
+- ☎️ Classic telephone
+- 🎯 Phone with arrow
+- 📲 Phone with signal
+
+The extension will work without icons (Chrome shows default), but icons make it look professional!
+

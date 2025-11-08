@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Contact Management Phone Dialer",
+  "version": "1.0.0",
+  "description": "Capture phone numbers from web pages and send them to your mobile phone dialer",
+  "permissions": [
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
+

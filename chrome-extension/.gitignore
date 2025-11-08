@@ -1,0 +1,18 @@
+# Packed extension
+*.crx
+*.pem
+
+# Icons (if you want to ignore temporary icons)
+# Uncomment if using placeholder icons during development
+# icons/*.png
+
+# Temporary files
+*.tmp
+*.bak
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
